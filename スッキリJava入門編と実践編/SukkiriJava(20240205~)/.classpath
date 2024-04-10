@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="20240206Before"/>
+	<classpathentry kind="src" path="20240206-10:40"/>
+	<classpathentry kind="src" path="20240207-11:07"/>
+	<classpathentry kind="src" path="20240207-14:20"/>
+	<classpathentry kind="src" path="20240208-10:06"/>
+	<classpathentry kind="src" path="20240206-(Before)"/>
+	<classpathentry kind="src" path="20240209-10:33"/>
+	<classpathentry kind="src" path="20240212-09:47"/>
+	<classpathentry kind="src" path="20240213-13:25"/>
+	<classpathentry kind="src" path="20240214-12:44"/>
+	<classpathentry kind="src" path="20240215-14:27"/>
+	<classpathentry kind="src" path="20240219-12:53"/>
+	<classpathentry kind="src" path="20240220-12:24"/>
+	<classpathentry kind="src" path="20240221-12:07"/>
+	<classpathentry kind="src" path="20240223 - 13:00"/>
+	<classpathentry kind="src" path="20240223-13:00"/>
+	<classpathentry kind="src" path="20240228-10:10"/>
+	<classpathentry kind="src" path="20240301-12:44"/>
+	<classpathentry kind="src" path="20240304-12:57"/>
+	<classpathentry kind="src" path="capsule"/>
+	<classpathentry kind="src" path="polymorphism"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

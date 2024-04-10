@@ -1,0 +1,15 @@
+package code1103;
+import code1105.Account;
+
+public class Account {
+  String owner;     // 口座名義人
+  int zandaka;      // 口座残高
+  public Account(String owner, int zandaka) {
+    owner = owner;
+    zandaka = zandaka;
+  }
+  public void transfer(Account dest, int amount) {
+    dest.zandaka += amount;
+    zandaka -= amount;
+  }
+}

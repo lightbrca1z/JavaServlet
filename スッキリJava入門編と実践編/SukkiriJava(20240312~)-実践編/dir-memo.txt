@@ -1,0 +1,6 @@
+ディレクトリ設定
+./20240322-12:09/fileReader/
+./20240326-10:40/properties01/
+./20240326-10:40/properties01/rpgdata.properties
+
+./20240326-10:40/properties02/rpgdata.properties

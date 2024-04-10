@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="HeroAndSword"/>
+	<classpathentry kind="src" path="20240313-12:17"/>
+	<classpathentry kind="src" path="20240314-11:24"/>
+	<classpathentry kind="src" path="20240315-12:04"/>
+	<classpathentry kind="src" path="20240318-12:38"/>
+	<classpathentry kind="src" path="20240319-12:38"/>
+	<classpathentry kind="src" path="20240320-11:27"/>
+	<classpathentry kind="src" path="20240321-14:20"/>
+	<classpathentry kind="src" path="20240322-12:09"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-1.2-api-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-api-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-api-test-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-appserver-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/commons-lang3-3.14.0/commons-lang3-3.14.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/commons-lang3-3.14.0/commons-lang3-3.14.0-sources.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/commons-lang3-3.14.0/commons-lang3-3.14.0-test-sources.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/commons-lang3-3.14.0/commons-lang3-3.14.0-tests.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/commons-lang3-3.14.0/commons-lang3-3.14.0.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-cassandra-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-core-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-core-test-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-couchdb-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-docker-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-flume-ng-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-iostreams-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jakarta-smtp-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jakarta-web-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jcl-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jdbc-dbcp2-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jpa-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jpl-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-jul-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-kubernetes-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-layout-template-json-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-mongodb3-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-mongodb4-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-slf4j-impl-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-slf4j2-impl-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-spring-boot-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-spring-cloud-config-client-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-taglib-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-to-jul-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-to-slf4j-2.23.1.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse_2023-12.app/Contents/jar/apache-log4j-2.23.1-bin/log4j-web-2.23.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
