@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
+<?xml version="1.0" encoding="UTF-8"?><Context>
     <!-- データベース接続の定義 -->
     <Resource name="jdbc/test" auth="Container"
               type="javax.sql.DataSource" driverClassName="org.h2.Driver"
