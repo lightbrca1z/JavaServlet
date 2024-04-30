@@ -7,7 +7,7 @@
 <title>どこつぶ</title>
 </head>
 <body>
-<h1>どこつぶログアウト</h1_:]>
+<h1>どこつぶログアウト</h1>
 <p>ログアウト</p>
 <a href="./jsp/index.jsp">トップへ</a>
 </form>
