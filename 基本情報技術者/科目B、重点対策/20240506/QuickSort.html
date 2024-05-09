@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list = [12,5,26,2,10,18,19];
+    console.log("listの交換: " + list);
+    var i,j,pivot = 0;
+    function quickSort(list){
+        if(list.length <= 1){
+            return list;
+        }
+        var pivotIndex = Math.floor(list.length / 2);
+        var pivot = list.splice(pivotIndex, 1)[0];
+        var left = [];
+        var right = [];
+        for(i = 0; i <= list.length-1; i++){
+            if(list[i]<=pivot){
+                left.push(list[i]);
+            }else{
+                right.push(list[i]);
+            }
+        }
+        left = quickSort(left);
+        right = quickSort(right);
+        return quickSort(left).concat([pivot], quickSort(right));
+    }
+    console.log("Sorted list: " + quickSort(list));
+</script>
+<body>
+</body>
+</html>

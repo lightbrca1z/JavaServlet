@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function minNum(){
+
+        var record = [50,80,70,90,60];
+
+        var i = 0;
+        var min = record[0];
+        while(i < 5){
+            if(min > record[i]){
+                min = record[i];
+            }
+            i = i + 1;
+        }
+        
+        console.log("min : " + min);
+    }
+    minNum();
+</script>
+<body>
+</body>
+</html>

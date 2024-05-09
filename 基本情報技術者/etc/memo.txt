@@ -1,0 +1,2 @@
+let userInput = prompt("Please enter a value:");
+console.log("User input:", userInput);

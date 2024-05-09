@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Boyer-Moore Search Algorithm</title>
+</head>
+<body>
+<script>
+function buildBadMatchTable(pattern) {
+    var table = {};
+    var patternLength = pattern.length;
+    for (var i = 0; i < patternLength - 1; i++) {
+        table[pattern[i]] = patternLength - i - 1;
+    }
+    table[pattern[patternLength - 1]] = patternLength; // Last character case
+    return table;
+}
+
+function boyerMooreSearch(text, pattern) {
+    var badMatchTable = buildBadMatchTable(pattern);
+    var patternLength = pattern.length;
+    var textLength = text.length;
+    var i = patternLength - 1; // Start at the end of the pattern
+
+    while (i < textLength) {
+        var j = patternLength - 1; // Start at the end of the pattern
+
+        while (text[i] === pattern[j]) {
+            if (j === 0) return i; // Match found at index i
+            i--;
+            j--;
+        }
+
+        var shift = badMatchTable[text[i]] || patternLength; // Default shift is the pattern length
+        i += shift;
+    }
+    return -1; // No match found
+}
+
+// Test the function
+var text = "Here is a simple example.";
+var pattern = "simple";
+var result = boyerMooreSearch(text, pattern);
+console.log("text : " + text);
+console.log("pattern : " + pattern);
+console.log("Match found at index:", result);
+</script>
+</body>
+</html>

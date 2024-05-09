@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i, j = 0;
+        var match = true;
+
+        function NaiveSearch(str, p) {
+            for (i = 0; i <= (str.length - p.length); i++) { // 修正：ループの開始インデックスを 0 に変更
+                for (j = 0; j < p.length; j++) { // 修正：j の初期値を 0 に変更
+                    if (str[i + j] !== p[j]) { // 修正：インデックスのオフセットを修正
+                        match = false;
+                        break; // 不一致時にループを抜ける
+                    } else {
+                        match = true;
+                    }
+                }
+                if (match) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        console.log(NaiveSearch(['a', 'a', 'b', 'b', 'c'], ['b', 'c'])); // 文字列は引用符で囲む
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sort(list){
+        var tmp;
+        for(var i = 0; i < list.length; i++){
+            min = i;
+            console.log("listの交換1: " + list);
+            for(var j = 0;j < list.length-i+1;j++){
+                if(list[j] > list[j + 1]){
+                    tmp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = tmp;
+                    console.log("list[j] : " + list[j+1]);
+                    console.log("list[j+1] : " + list[j]);
+                    console.log("listの交換2: " + list);
+                }
+            }
+        }
+    return list;
+}
+    console.log(sort([5,7,4,2,9,10]));
+</script>
+<body>
+</body>
+</html>

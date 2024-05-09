@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var i, j, s = 0;
+    i = 0; // Start from 0
+    s = 0;
+    
+    var shift = [1, 1, 3, 3, 2];
+    var skip = [0, 0, 0, 0, 2];
+    var match = true;
+
+    function KMPSearch(str, p){
+        while (i <= (str.length - p.length)) { // Corrected loop condition
+            for (j = 1 + s; j <= p.length; j++) { // Iterate over the pattern
+                if (str[i + j] != p[j]) { // Fix index offset
+                    match = false;
+                    s = skip[j];
+                    i = i + shift[j];
+                    break; // Exit loop on mismatch
+                } else {
+                    match = true;
+                }
+            }
+            if (match) {
+                return i;
+            }
+        }
+        return -1;
+    }
+       
+    console.log(KMPSearch(['a','a','b','b','c'], ['b','c'])); // Strings are enclosed in quotes
+</script>
+<body>
+    
+</body>
+</html>

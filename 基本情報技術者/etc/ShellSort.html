@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+let list = [10,20,9,4,8,40,55,20,31,42,2];
+console.log(list);
+function sort(list){
+    let i,j = 0;
+    let h = 4;
+    let tmp;
+    while(h>=0){
+        for(i=h;i<list.length;i++)
+        {
+            j = i;
+            // console.log(j);
+            tmp = list[i];
+            while((j>=h) && (list[j- h] > tmp)){
+                list[j] = list[j-h];
+                // console.log(list[j]);
+                j = j - h;
+            }
+            list[j] = tmp;
+            console.log(list[j]);
+        }
+        console.log("h:"+h);
+        h = h - 1;
+    }
+    return list;
+}
+let result = sort(list);
+console.log(result);
+</script>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>

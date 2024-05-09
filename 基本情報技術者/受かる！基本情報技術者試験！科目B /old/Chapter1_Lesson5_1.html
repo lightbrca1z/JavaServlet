@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+// var number = 10;
+// var Amount = number;
+
+// while(number > 1){
+//     number = number - 1;
+//     Amount = Amount + number;
+//     console.log("Amount " + number + ":" + Amount);
+// }
+
+// console.log("１から10の合計: " + Amount);
+
+ var Amount = 0;
+ var inputPrice = 0;
+do{
+    inputPrice = prompt("金額を入力して下さい！:");
+    if(inputPrice != -1){
+        Amount = parseInt(Amount) + parseInt(inputPrice);
+        console.log("合計金額:" + Amount);
+    }
+ }while(inputPrice != -1)
+ console.log("合計金額:" + Amount);
+
+</script>
+<body>
+    
+</body>
+</html>

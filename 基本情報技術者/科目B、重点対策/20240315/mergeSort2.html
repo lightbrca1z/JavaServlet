@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sort(list){
+        if(list.length <= 1){
+            return list;
+        }
+        else{
+            var mid = Math.floor(list.length / 2);
+            var left = [];
+            var right = [];
+            for(var i = 0; i < mid; i++){ // インデックスの範囲修正
+                left.push(list[i]);
+                console.log("leftPush : " + left);
+            }
+            for(var j = mid; j < list.length; j++){ // インデックスの範囲修正
+                right.push(list[j]);
+                console.log("rightPush : " + right);
+            }
+        }
+
+        console.log("left : " + left);
+        left = sort(left);
+        console.log("right : " + right);
+        right = sort(right);
+        console.log("merge : " + merge(left,right));
+        return merge(left,right);
+        
+    }
+
+    function merge(left,right){
+        var ret = [];
+        var i = 0, j = 0;
+        while(i < left.length && j < right.length){
+            if(left[i] < right[j]){
+                ret.push(left[i]);
+                i++;
+            }
+            else{
+                ret.push(right[j]);
+                j++;
+            }
+        }
+        // 修正：残りの要素を処理するためのループを追加
+        for(; i < left.length; i++){
+            ret.push(left[i]);
+        }
+        for(; j < right.length; j++){
+            ret.push(right[j]);
+        }
+        return ret;
+    }
+    console.log(sort([3,2,4,4,2,5,7,6,90,1]));
+</script>
+<body>
+</body>
+</html>

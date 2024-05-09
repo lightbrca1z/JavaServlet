@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+let list = [10,20,9,4,8,40,55,20,31,42,2];
+console.log(list);
+function quickSort(list){
+    let i,j = 0;
+    if(list.length <= 1){
+        return list;
+    }
+
+    const pivotIndex = Math.floor(list.length / 2);
+    const pivot = list[pivotIndex];
+    const left = [];
+    const right = [];
+
+    for (let i = 0; i < list.length; i++) {
+        if (i === pivotIndex) {
+            continue;
+        }
+        if (list[i] <= pivot) {
+            console.log("Left2 : " +list[i]);
+            left.push(list[i]);
+        } else {
+            console.log("Right2 : " +list[i]);
+            right.push(list[i]);
+        }
+    }
+
+    const sortedLeft = quickSort(left);
+    console.log("Left : " + sortedLeft);
+    const sortedRight = quickSort(right);
+    console.log("Right : " + sortedRight);
+
+    return [...sortedLeft, pivot, ...sortedRight];
+}
+const result = quickSort(list);
+console.log(result);
+</script>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>

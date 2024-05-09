@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list = [12, 5, 26, 2, 10, 18, 19];
+    for (var i = Math.floor(list.length / 2); i >= 0; i--) {
+        heapify(list, i, list.length);
+    }
+
+    function heapify(arr, root, bottom) {
+        var left = root * 2 + 1;
+        var right = root * 2 + 2;
+        var max = root;
+
+        if (left < bottom && arr[left] > arr[max]) {
+            max = left;
+        }
+
+        if (right < bottom && arr[right] > arr[max]) {
+            max = right;
+        }
+
+        if (max != root) {
+            var tmp = arr[root];
+            arr[root] = arr[max];
+            arr[max] = tmp;
+            heapify(arr, max, bottom);
+        }
+    }
+
+    function heapSort(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            var tmp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = tmp;
+            heapify(arr, 0, i);
+        }
+        return arr;
+    }
+
+    console.log("Sorted list: " + heapSort(list));
+</script>
+<body>
+</body>
+</html>

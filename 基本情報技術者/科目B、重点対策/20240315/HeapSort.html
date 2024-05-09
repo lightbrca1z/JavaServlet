@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log("値 : " + ([32,21,11,7,5,44,71,61,9,10]));
+
+    var list = [32,21,11,7,5,44,71,61,9,10];
+
+    function heapSort(list){
+        var n = list.length;
+
+        // ヒープを構築する
+        for(var i = Math.floor(n/2); i >= 0; --i){
+            heapify(list, n, i);
+        }
+
+        // ヒープから要素を1つずつ取り出してソートする
+        for(var i = n-1; i > 0; --i){
+            var temp = list[0];
+            list[0] = list[i];
+            list[i] = temp;
+            heapify(list, i, 0);
+        }
+
+        return list;
+    }
+
+    function heapify(arr, n, i){
+        var largest = i;
+        var left = 2 * i + 1;
+        var right = 2 * i + 2;
+
+        if(left < n && arr[left] > arr[largest]){
+            largest = left;
+        }
+
+        if(right < n && arr[right] > arr[largest]){
+            largest = right;
+        }
+
+        if(largest !== i){
+            var swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
+            heapify(arr, n, largest);
+        }
+    }
+
+    console.log(heapSort([32,21,11,7,5,44,71,61,9,10]));
+</script>
+<body>
+</body>
+</html>

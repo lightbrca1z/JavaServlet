@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let current = arr[i];
+    let j = i - 1;
+    console.log("j1:" + j);
+    console.log("KoukanMae1:" + current);
+    while (j >= 0 && arr[j] > current) {
+     arr[j + 1] = arr[j];
+     console.log("KoukanNumber"+j+":" + arr[j]);
+     console.log("j+1:" + (j+1));
+      j--;
+      console.log("****koukanAccount:"+(j+2)+"*****");
+    }
+    console.log("(j+1)v2:" + (j+1));
+    arr[j + 1] = current;
+    console.log("****koukanAccount:"+(j+1)+"*****");
+    console.log("KoukanBefore:" + current);
+    console.log("****"+i+"****");
+  }
+  return arr;
+}
+
+let arrayToSort = [5, 2, 9, 3, 1];
+insertionSort(arrayToSort);
+console.log(arrayToSort); // ソート済みの配列が表示されます
+
+</script>
+
+<body>
+    
+</body>
+</html>

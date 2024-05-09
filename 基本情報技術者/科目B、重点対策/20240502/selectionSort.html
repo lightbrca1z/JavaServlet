@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sort(list){
+        var tmp,min;
+        for(var i = 0; i < list.length; i++){
+            min = i;
+            for(var j = i+1;j < list.length;j++){
+                if(list[j] < list[min]){
+                    min = j;
+                    console.log("min : " + list[min]);
+                }
+            }
+            tmp = list[i];
+            list[i] = list[min];
+            list[min] = tmp;
+            console.log("listの交換: " + list);
+        }
+        return list;
+    }
+    console.log(sort([32,21,11,7,5,44,71,61,9,10]));
+</script>
+<body>
+</body>
+</html>

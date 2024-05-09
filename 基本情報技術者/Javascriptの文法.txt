@@ -1,0 +1,33 @@
+関数の宣言。
+function quickSort(list){
+  
+}
+
+配列宣言方法。
+
+var myArray = [];
+var myArray2 = [1,2,3,4,5];
+
+var myArray = new Array();
+var myArray2 = new Array(1,2,3,4,5);
+
+var myArray = Array.of();
+var myArray = Array.of(1,2,3,4,5);
+
+
+値の入力
+
+var userInput = prompt("Please enter a value:");
+
+<form>
+  <label for="userInput">Input:</label>
+  <input type="text" id="userInput">
+  <button type="button" onclick="getValue()">Submit</button>
+</form>
+
+<script>
+  function getValue() {
+    var userInput = document.getElementById("userInput").value;
+    alert("User input: " + userInput);
+  }
+</script>

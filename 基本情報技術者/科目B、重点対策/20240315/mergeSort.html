@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list = [];
+    var myArray = [];
+    var mid;
+    var left,right = new Array();
+    function sort(list){
+        if(list.length <= 1){
+            return list;
+        }
+        else{
+            mid = list.length / 2;
+        }
+        for(i = 1;i <= list.length; i++){
+            if(i <= mid){
+                left.push(list[i]);
+            }else{
+                right.push(list[i]);
+            }
+        }
+        left = sort(left);
+        right = sort(right);
+        return merge(left,right);
+    }
+
+    function merge(left,right){
+        
+        var ret = [];
+        var i,j = 1;
+
+        while(i <= left.length && j <= right.length){
+            if(left[i] < right[j]){
+                ret.push(left[i]);
+                i = i + 1;
+            }
+            else{
+                ret.push(right[j]);
+                j = j + 1;
+            }
+        }
+        ret.push(...left[i],right[j]);
+
+        return ret;
+    }
+    conosole.log(sort([3,2,4,4,2,5,7,6,90,1]))
+
+</script>
+<body>
+    
+</body>
+</html>

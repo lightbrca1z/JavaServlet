@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sort(list){
+        var i,j,tmp = 0;
+        for(var i = 1; i < list.length; i++){
+            j = i;
+            tmp = list[i];
+            while((j > 0) && (list[j - 1] > tmp)){
+                list[j] = list[j - 1];
+                j= j - 1;
+            }
+        list[j] = tmp;
+    }
+    return list;
+    }
+
+    console.log(sort([5,7,4,2,9,10]));
+</script>
+<body>
+</body>
+</html>

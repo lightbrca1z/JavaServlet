@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+function shellSort(arr) {
+  const n = arr.length;
+  let gap = Math.floor(n / 2);
+  console.log("gapRoot:"+gap);
+  
+  while (gap > 0) {
+  console.log("gapWhile:"+gap);
+    for (let i = gap; i < n; i++) {
+      console.log("gap+I:"+gap);
+      let temp = arr[i];
+      console.log("temp:"+temp);
+      let j = i;
+      console.log("j:"+j);
+      while (j >= gap && arr[j - gap] > temp) {
+        console.log("True");
+        arr[j] = arr[j - gap];
+        console.log("arr[j]Koukan:"+arr[j - gap]);
+        j -= gap;
+        console.log("j(-gap):"+j);
+        console.log("*********");
+      }
+      console.log("False");
+      arr[j] = temp;
+      console.log("arr[j]Soto:"+arr[j]);
+      console.log("*****1****");
+    }
+    gap = Math.floor(gap / 2);
+    console.log("gapMath-Soto:"+gap);
+    console.log("*********");
+  }
+  return arr;
+}
+
+let arrayToSort = [5, 2, 9, 3, 1];
+shellSort(arrayToSort);
+console.log(arrayToSort); // ソート済みの配列が表示されます
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function partjob(){
+        console.log("hello world!");
+        var payment = 0;
+        var cnt = 0;
+        for(payment;payment < 200000;payment=payment+10000){
+            cnt++;
+            console.log("アルバイトをする！"+cnt+"回目");
+            console.log("貯金額 : " + payment);
+        }
+        if(payment == 200000){
+            console.log("バイクを買う!");
+            console.log("バイクを買った!");
+        }
+    }
+    partjob();
+</script>
+<body>
+</body>
+</html>

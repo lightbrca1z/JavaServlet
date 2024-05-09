@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    var i, j = 0;
+    var start = 0;
+    var match = true;
+
+    var skipChar = ['a','b', '-'];
+    var skipNum = [2,1,5];
+    var skipNumComp = 0;
+
+    function BMSearch(str, p){
+        i = p.length - 1; // Start from the end of the pattern
+        while (i < str.length) {
+            start = i;
+            for(j=p.length-1; j>=0; j--){ // Iterate over pattern from end to start
+                if(str[start] != p[j]){
+                    if(skipChar.indexOf(str[start]) !== -1){
+                        skipNumComp = skipNum[j];
+                    }
+                    i = start + skipNumComp;
+                    console.log("i : " + i);
+                    match = false;
+                    break;
+                }
+                else{
+                    match = true;
+                }
+                start = start - 1; // Move the pointer backward
+            }
+            if (match) {
+                return start + 1; // Return the index of the first character of the matched pattern
+            }
+        }
+        return -1;
+    }
+       
+    console.log(BMSearch(['a','a','b','b','c'], ['b','c'])); // Strings are enclosed in quotes
+</script>
+</body>
+</html>

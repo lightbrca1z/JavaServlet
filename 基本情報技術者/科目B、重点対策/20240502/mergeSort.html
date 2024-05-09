@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sort(list){
+        var mid;
+        var left = [];
+        var right = [];
+
+        if(list.length <= 1){
+            return list;
+        }else{
+           mid = list.length / 2;
+        }
+
+        for(var i = 0; i < list.length; i++){
+            if(i < mid){
+                left.push(list[i]);
+            }else{
+                right.push(list[i]);
+            }
+        }
+        left = sort(left);
+        right = sort(right);
+        return merge(left,right);
+    }
+
+    function merge(left,right){
+        var ret = [];
+        var i = 0;
+        var j = 0;
+
+        while(i < left.length && j < right.length){
+            if(left[i] < right[j]){
+                ret.push(left[i]);
+                i = i + 1;
+            }else{
+                ret.push(right[i]);
+                j = j + 1;
+            }
+        }
+
+        while(i < left.length){
+            ret.push(left[i]);
+            i++;
+        }
+        while(j < right.length){
+            ret.push(right[j]);
+            j++;
+        }
+
+        return ret;
+    }
+
+    console.log(sort([5,7,4,2,9,10]));
+</script>
+<body>
+</body>
+</html>

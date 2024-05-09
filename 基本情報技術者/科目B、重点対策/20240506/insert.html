@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list = [12,5,26,2,10,18,19];
+    console.log("listの交換: " + list);
+    var i,j,tmp = 0;
+    function sort(list){
+        for(i = 1; i < list.length; i++){
+            j = i;
+            tmp = list[i];
+            while((j > 0) && (list[j-1] > tmp)){
+                console.log("listの中身: " + list[j-1] + "," + list[j]);
+                list[j] = list[j - 1];
+                console.log("list: " + list[j]);
+                console.log("list[]: " + list);
+                j = j - 1;
+            }
+            list[j] = tmp;
+            console.log("list[j]: " + list[j]);
+            console.log("listの交換: " + list);
+            console.log("------------------------");
+        }
+        return list;
+    }
+    console.log(sort(list));
+</script>
+<body>
+</body>
+</html>

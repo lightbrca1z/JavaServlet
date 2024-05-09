@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字列検索</title>
+</head>
+<script>
+    // M
+    let mojiretsu = ["a","b","c","a","p","p","l","e"];
+    // K
+    let SearchText = ["a","p","p","l","e"];
+
+    //ML
+    let mojiretsuLength = mojiretsu.length;
+    //KL
+    let SearchTextLength = SearchText.length;
+    
+    //flg
+    let flg = 0;
+    //MP
+    let mp = 1;
+
+    while(mp + SearchText.length - 1 <= mojiretsuLength){
+        let kp = 1;
+        // console.log("検索文字列数 : " + (mp + SearchText.length - 1));
+        while(mojiretsu[mp + kp - 1] == SearchText[kp]){
+            if(kp < SearchTextLength){
+                // console.log("KP : " + kp);
+                kp = kp + 1;
+            }
+            else{
+                console.log("該当データあり : ", mp);
+                flg = 1;
+                break;
+            }
+        }
+        mp = mp + 1;
+    }
+    if (flg == 0){
+        console.log("該当データなし");
+    }
+</script>
+<body>
+    
+</body>
+</html>

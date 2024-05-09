@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var Amount = 0;
+    var inputPrice = 0;
+
+    inputPrice = prompt("金額を入力して下さい！:");
+    while(inputPrice != -1){
+        Amount = parseInt(Amount) + parseInt(inputPrice); // parseIntを使用して文字列から数値に変換して足し合わせる
+        inputPrice = prompt("金額を入力して下さい！:");
+        console.log("合計金額:" + Amount); // コンソールログの出力箇所が修正されました
+    }
+    console.log("合計金額:" + Amount); // ループが終了した後に合計金額を再度表示する
+</script>
+<body>
+    
+</body>
+</html>
